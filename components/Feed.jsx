@@ -81,14 +81,14 @@ const Feed = () => {
       </form>
 
       {/* All Prompts */}
-      {searchText ? (
+      {allPosts.length > 0 && (searchText ? (
         <PromptCardList
           data={searchedResults}
           handleTagClick={handleTagClick}
         />
       ) : (
         <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
-      )}
+      ))}
     </section>
   );
 };
